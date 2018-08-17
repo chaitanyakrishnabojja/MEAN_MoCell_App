@@ -34,6 +34,9 @@ function mobilesInfoCtrl($routeParams, $modal, getMobileByIdService) {
             console.log("reached mobilesInfoCtrl", data);
             vm.mobile = data;
             vm.message = "";
+              vm.bread_title=vm.mobile.category;
+
+
 
             //            $scope.inputPrice = data.price;
             //            $scope.inputDescription = data.description;

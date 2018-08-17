@@ -18,15 +18,14 @@
     </div>
     <div class="col-md-6">
         <form class="form-horizontal" ng-submit="submitForm()" name="myForm">
+
             <div class="form-group">
-                <label class="col-xs-3">Category: </label>
-                <select class="input-select col-xs-9" ng-model="category" ng-change="changedCategory()">
+                <select class="form-control input-sm" ng-model="category" ng-change="changedCategory()">
 								<option value="Mobiles">Mobiles</option>
                                 <option value="Laptops">Laptops</option>
-                                <option value="Accessories">Accessories</option>
-								</select>
-
-            </div>
+                                <option value="Accessories">Accessories</option>                        
+                    </select>
+            </div> 
             <div class="form-group">
                 <select id="mobile" class="form-control input-sm" name="mobile" ng-model="mobileid">
                             <option value={{mobile._id}} ng-repeat="mobile in mobiles_list">{{ mobile.name }}</option>    
