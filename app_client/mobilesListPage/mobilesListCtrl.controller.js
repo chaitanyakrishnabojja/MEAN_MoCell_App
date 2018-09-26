@@ -1,4 +1,4 @@
-var mobilesListCtrl = function ($scope, getMobilesList) {
+var mobilesListCtrl = function ($scope, getMobilesList, UserService) {
 
     $scope.changedCategory = function () {
         $scope.mobiles_list = $scope.total_list.filter(function (obj) {
@@ -9,7 +9,7 @@ var mobilesListCtrl = function ($scope, getMobilesList) {
 
     };
 
-
+console.log("testVar1", UserService.testVar);
     $scope.message = "Loading data...please wait.... ";
     getMobilesList.getData()
         .success(function (data) {
